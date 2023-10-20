@@ -7,16 +7,14 @@ folder=$1 # folder path relative to pwd
 img_pronounce=$2 # images will be named [img_pronounce]_[idex]
 curdir=$(pwd)
 cd $folder
-n=$(ls -1|wc -l) # number of files in $folder
+n=$(ls -1|grep -c .png) # number of .png files in $folder
 mkdir -p temp
-
-for i in $(seq $n)
+i=0
+for filename in ./*.png;
 do
-  filename=$(ls -1|head -1);
-  if [[ $filename == *.png ]]; then
-    echo $filename;
-    mv "$filename" temp/"$img_pronounce"_"$i".png;
-  fi
+  echo $filename;
+  mv "$filename" temp/"$img_pronounce"_"$i".png;
+  i=$((i+1));
 done
 mv temp/* .
 rm -r temp
