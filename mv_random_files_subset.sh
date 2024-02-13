@@ -1,5 +1,7 @@
-  GNU nano 4.8                    move_subset_images.sh                               
 #!/bin/bash
+
+### Disclaimer: this does not work with folders that contain more than ~4000 files.
+### Use ./mv_from_large_folder.sh instead.
 
 # Source and destination directories
 source_dir="source_img_dir"
