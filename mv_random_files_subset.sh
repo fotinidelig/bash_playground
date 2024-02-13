@@ -29,6 +29,6 @@ for ((i = 0; i < $num_images_to_move; i++)); do
     mv "${image_files_shuffled[$i]}" "$destination_dir"
 done
 
-echo "Random subset of $num_images_to_move images moved from $source_dir to $destinat>
+echo "Random subset of $num_images_to_move images moved from $source_dir to $destination_dir"
 
 
