@@ -3,12 +3,12 @@
 #!/bin/bash
 
 extension_a = ".jpg"
-folder_a = "images/"
+folder_a = "images"
 
 extension_b = ".txt"
-folder_b = "labels/"
+folder_b = "labels"
 
-for file in "$folder_a/*$extension_a"; do
+for file in "$folder_a"/*"$extension_a"; do
     rawfile=$(basename "$file" "$extension_a")
     if [ ! -f "$folder_b/$rawfile$extension_b" ]; then
         rm "$file"
