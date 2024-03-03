@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# create png from webp files using ffmpeg
+
 target_folder=$1
 for file in *webp;
 do
