@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# rename a list of .png files with index from 1 to N (number of files)
+# rename a list of .png files with pronounce and index from 1 to N (number of files)
 # to be used in datasets
 
 folder=$1 # folder path relative to pwd
@@ -18,5 +18,5 @@ do
 done
 mv temp/* .
 rm -r temp
-# shellcheck disable=SC2164
+
 cd $curdir
